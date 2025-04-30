@@ -352,14 +352,14 @@ header .links a img {
   right: 0;
 }
 #page-nav .current {
-  color: #f33;
+  color: #42b983;
 }
 #page-nav .page-number {
   margin: 0 8px;
 }
 #page-nav .page-number:hover,
 #page-nav .extend:hover {
-  color: #f33;
+  color: #42b983;
 }
 #main > ul.archive li.archive-item {
   position: relative;
@@ -387,7 +387,7 @@ header .links a img {
   color: #444;
 }
 #main > ul.archive li.archive-item div.info a:hover {
-  color: #f33;
+  color: #42b983;
 }
 #main > ul.archive li.archive-item div.info h2 {
   font-size: 20px;
@@ -445,11 +445,11 @@ article.post {
   line-height: 1.8em;
 }
 #main article.post a {
-  color: #f33;
+  color: #42b983;
   border-bottom: 2px solid transparent;
 }
 #main article.post a:hover {
-  border-bottom-color: #f33;
+  border-bottom-color: #42b983;
 }
 #main article.post h2 {
   position: relative;
@@ -459,7 +459,7 @@ article.post {
 }
 #main article.post h2:before {
   content: '';
-  border-left: 5px solid #f33;
+  border-left: 5px solid #42b983;
   position: absolute;
   left: -15px;
   height: 75%;
@@ -532,7 +532,7 @@ article.post {
 }
 #main article.post pre .keyword,
 #main article.post pre .attribute {
-  color: #e96900;
+  color: #000;
 }
 #main article.post pre .number,
 #main article.post pre .literal {
@@ -663,11 +663,11 @@ footer p {
   margin: 0 0 15px;
 }
 footer a {
-  color: #f33;
+  color: #42b983;
   border-bottom: 2px solid transparent;
 }
 footer a:hover {
-  border-bottom-color: #f33;
+  border-bottom-color: #42b983;
 }
 @media screen and (max-width: 500px) {
   header {
