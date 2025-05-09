@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  
+  <title>Imperative Learning | CHJA</title>
+  <meta name="google-site-verification" content="" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta itemprop="name" content="CHJA" />
+  <meta itemprop="description" content="" />
+  <meta itemprop="image" content="" />
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <!-- keywords and description -->
+  
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <script src="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css" integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js" integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"></script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  <div id="container">
+    <header>
+  <div class="site-title">
+    <a href="/">
+      CHJA
+    </a>
+  </div>
+  
+  
+  <p class="links">
+    
+    <a href="">
+      <img src="/images/links/github.png" alt="">
+    </a>
+    
+  </p>
+  
+</header>
+    <div id="main">
+      <article class="post">
+  <h3 class="date">
+  <time datetime="2025-05-07T16:00:00.000Z">
+    May 8, 2025
+  </time>
+</h3>
+  <h1>Imperative Learning</h1>
+  <p class="post-info">
+  
+  
+</p>
+  
+  
+  <article>
+    <h2 id="Related-Works"><a href="#Related-Works" class="headerlink" title="Related Works"></a>Related Works</h2><h3 id="Bilevel-Optimization-双层优化"><a href="#Bilevel-Optimization-双层优化" class="headerlink" title="Bilevel Optimization   (双层优化)"></a>Bilevel Optimization   (双层优化)</h3><h3 id="Learning-Frameworks-in-Robotics"><a href="#Learning-Frameworks-in-Robotics" class="headerlink" title="Learning Frameworks in Robotics"></a>Learning Frameworks in Robotics</h3><ul>
+<li>Imitation Learning</li>
+<li>Reinforcement Learning</li>
+<li>Meta Learning</li>
+</ul>
+<h3 id="Neuro-symbolic-Learning"><a href="#Neuro-symbolic-Learning" class="headerlink" title="Neuro-symbolic Learning"></a>Neuro-symbolic Learning</h3><hr>
+<h2 id="Imperative-Learning"><a href="#Imperative-Learning" class="headerlink" title="Imperative Learning"></a>Imperative Learning</h2><p>指令学习（IL）的拟议框架如图1所示，它由三个模块组成，即神经系统、推理引擎和记忆模块。具体来说，神经系统从图像、激光雷达点、惯性测量单元（IMU）测量值及其组合等原始传感器数据中提取高级语义属性。随后，这些语义属性被发送至推理引擎，这是一个由物理原理、逻辑推理、解析几何等所代表的符号处理过程。记忆模块存储机器人的经验以及获取的知识，例如关于物理世界的长期或短期数据、符号规则和地图。此外，推理引擎会对记忆模块进行一致性检查，这将更新记忆模块或进行必要的自我修正。直观地看，这种设计有潜力将神经系统的表达性特征提取能力、推理引擎的可解释性和泛化能力，以及记忆模块的记忆能力整合到一个单一框架中。<br><img src="/images/imperative/01.png" title="IL的工作框架"></p>
+<hr>
+<h2 id="文献"><a href="#文献" class="headerlink" title="文献"></a>文献</h2><p><a target="_blank" rel="noopener" href="https://sairlab.org/iPlanner/">iPlanner: Imperative Path Planning</a><br><img src="/images/imperative/03.png"><br>策略训练采用双层优化（BLO）过程，该过程结合了网络更新和基于度量的轨迹优化</p>
+<ul>
+<li>MP（基于经典运动基元的规划方法）<em>噪声敏感</em></li>
+<li>SL（监督学习）  <em>泛化性差</em></li>
+<li>RL（强化学习）  <em>相机视野受限以及没有针对规划问题进行优化，纯自监督</em></li>
+<li>IL（指令学习）<br><img src="/images/imperative/04.png"><br><a target="_blank" rel="noopener" href="https://github.com/leggedrobotics/viplanner">ViPlanner: Visual Semantic Imperative Learning for Local Navigation</a><br><img src="/images/imperative/02.png"><br><img src="/images/imperative/05.png"><br>传统点云或网格的几何地图无法对具有相似几何形状的不同地形上的路径进行推理，或者无法预测能够穿越几何障碍物（如楼梯）的路径。本文用RGB颜色标记语义地图编码空间可通过性<br>用指令学习进行训练。模仿学习和自监督学习陌生环境下泛化能力不理想以及需要大量的数据，最优的表现会受限于训练的演示数据。强化学习则是会要求模型的训练耗时比较长。</li>
+</ul>
+
+  </article>
+  
+</article>
+
+
+    </div>
+  </div>
+  <footer>
+  
+  
+  <p>
+    Powered by <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/syy11cn/hexo-theme-linear">Linear</a> from <a target="_blank" rel="noopener" href="https://syy11.cn">Yiyang Sun</a>
+  </p>
+</footer>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+  </script>
+  <script>
+    Waline({
+      el: '#waline',
+      placeholder: '',
+      avatar: 'retro',
+      visitor: true,
+      requiredFields: ['nick', 'mail'],
+      serverURL: '',
+      emoji: [
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili',
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/qq',
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/alus',
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji',
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo',
+        'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tieba',
+      ]
+    });
+  </script>
+</body>
+
+</html>
